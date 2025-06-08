@@ -55,7 +55,7 @@ bool checkForExist(const std::string& filename) {
         std::cout << "Connected to AWS IoT Core!" << std::endl;
 
     
-            if (checkForExist("/home/ubuntu/MQTT_APP-main/gps.txt")) {
+            if (checkForExist("/home/ubuntu/MQTT_APP-main/gps.txt")&&checkForExist("/home/ubuntu/MQTT_APP-main/ai.txt")) {
                 std::cout << "Detected! Sending alert to AWS IoT Core..." << std::endl;
 
                    std::ifstream file1("/home/ubuntu/MQTT_APP-main/ai.txt");
