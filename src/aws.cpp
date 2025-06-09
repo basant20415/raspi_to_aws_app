@@ -42,7 +42,7 @@ bool checkForExist(const std::string& filename) {
         mqtt::connect_options conn_opts;
         conn_opts.set_ssl(ssl_opts);
         conn_opts.set_keep_alive_interval(std::chrono::seconds(20));
-        conn_opts.set_clean_session(true);
+        conn_opts.set_clean_session(false);
 
         // Connect to AWS IoT Core
         std::cout << "Connecting to AWS IoT Core..." << std::endl;
