@@ -92,18 +92,6 @@ std::cout << "Plain text message published to topic: " << TOPIC << std::endl;
         client.disconnect();
         std::cout << "Disconnected from AWS IoT Core." << std::endl;
 
-std::ofstream ofs1("/home/ubuntu/MQTT_APP-main/ai.txt", std::ios::out | std::ios::trunc);
-if (!ofs1) {
-    std::cerr << "Error: Cannot clear ai.txt" << std::endl;
-}
-ofs1.close();
-
-// Clear the contents of gps.txt
-std::ofstream ofs2("/home/ubuntu/MQTT_APP-main/gps.txt", std::ios::out | std::ios::trunc);
-if (!ofs2) {
-    std::cerr << "Error: Cannot clear gps.txt" << std::endl;
-}
-ofs2.close();
 
     } catch (const mqtt::exception& exc) {
         std::cerr << "MQTT Exception: " << exc.what() << std::endl;
