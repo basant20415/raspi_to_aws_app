@@ -14,9 +14,9 @@
 #define TIMEOUT     std::chrono::seconds(10)
 
 // AWS IoT Core Credentials
-#define CA_PATH     "/home/ubuntu/MQTT_APP-main/root-ca.pem"
-#define CERT_PATH   "/home/ubuntu/MQTT_APP-main/certificate.pem.crt"
-#define KEY_PATH    "/home/ubuntu/MQTT_APP-main/private.pem.key"
+#define CA_PATH     "./MQTT_APP-main/root-ca.pem"
+#define CERT_PATH   "./MQTT_APP-main/certificate.pem.crt"
+#define KEY_PATH    "./MQTT_APP-main/private.pem.key"
 // Function to check for "gps_file" not empty
 bool checkForExist(const std::string& filename) {
     std::ifstream file(filename);
@@ -55,11 +55,11 @@ bool checkForExist(const std::string& filename) {
         std::cout << "Connected to AWS IoT Core!" << std::endl;
 
     
-            if (checkForExist("/home/ubuntu/MQTT_APP-main/gps.txt")&&checkForExist("/home/ubuntu/MQTT_APP-main/ai.txt")) {
+            if (checkForExist("./MQTT_APP-main/gps.txt")&&checkForExist("./MQTT_APP-main/ai.txt")) {
                 std::cout << "Detected! Sending alert to AWS IoT Core..." << std::endl;
 
-                   std::ifstream file1("/home/ubuntu/MQTT_APP-main/ai.txt");
-std::ifstream file2("/home/ubuntu/MQTT_APP-main/gps.txt");
+                   std::ifstream file1("./MQTT_APP-main/ai.txt");
+std::ifstream file2("./MQTT_APP-main/gps.txt");
 
 if (!file1 || !file2) {
     std::cerr << "Failed to open one or both files.\n";
