@@ -45,7 +45,7 @@ void clearFile(const std::string& filepath) {
 }
 
 int main() {
-    while (true) {
+   
         try {
             mqtt::client client(ADDRESS, CLIENTID);
 
@@ -79,8 +79,7 @@ int main() {
                 client.publish(msg);
                 std::cout << "Published current data.\n";
 
-                clearFile(GPS_FILE);
-                clearFile(AI_FILE);
+               
             } else {
                 std::cout << "One or both files are empty. Skipping current data.\n";
             }
@@ -117,8 +116,7 @@ int main() {
             }
         }
 
-        std::this_thread::sleep_for(std::chrono::seconds(10));
-    }
+     
 
     return 0;
 }
