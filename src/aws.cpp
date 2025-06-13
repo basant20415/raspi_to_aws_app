@@ -111,8 +111,7 @@ int main() {
                 std::string combined_payload = ai_data + gps_data;
                 storeLocally(combined_payload);
 
-                clearFile(GPS_FILE);
-                clearFile(AI_FILE);
+               
             }
         }
 
