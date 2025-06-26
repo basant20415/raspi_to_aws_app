@@ -1,7 +1,8 @@
 # 🚗 Vehicle-to-Cloud (V2C) — MQTT Publisher (C++)
 This application runs on a Raspberry Pi and is responsible for securely sending road damage alerts (detected via AI) to AWS IoT Core using MQTT protocol over TLS
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/49cbe83c-7487-4c0b-856b-98a2879e2845)
+
 
 ## 🔧 Features:
 - Reads AI detection result (ai.txt) and GPS coordinates (gps.txt).
